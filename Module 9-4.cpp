@@ -53,11 +53,11 @@ int main() {
 
 
 	for (int i = 0; i < answerNumber.length(); i++) {
-		if (answerNumber[i] = secretNumber[i]) {
+		if (answerNumber[i] == secretNumber[i]) {
 			bulls++;
 		}
 		else for (int j = 0; j < answerNumber.length(); j++) {
-			if (answerNumber[i] = secretNumber[j]) {
+			if (answerNumber[i] == secretNumber[j]) {
 				cow++;
 			}
 
