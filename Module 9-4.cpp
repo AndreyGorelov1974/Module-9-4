@@ -57,7 +57,7 @@ int main() {
 			bulls++;
 		}
 		else for (int j = 0; j < answerNumber.length(); j++) {
-			if ((answerNumber[i] == secretNumber[j]) && (i != j)) {
+			if ((i != j) && (answerNumber[i] == secretNumber[j])) {
 				cow++;
 			}
 
