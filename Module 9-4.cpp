@@ -10,24 +10,24 @@
 
 Примеры выполнения
 
-Введите задуманное число: 5671 
-Введите второе число: 7251 
+Введите задуманное число: 5671
+Введите второе число: 7251
 Быков: 1, коров: 2
 
-Введите задуманное число: 1234 
-Введите второе число: 1234 
+Введите задуманное число: 1234
+Введите второе число: 1234
 Быков: 4, коров: 0
 
-Введите задуманное число: 0023 
-Введите второе число: 2013 
+Введите задуманное число: 0023
+Введите второе число: 2013
 Быков: 2, коров: 1
 
-Введите задуманное число: 2013 
-Введите второе число: 0023 
+Введите задуманное число: 2013
+Введите второе число: 0023
 Быков: 2, коров: 1
 
-Введите задуманное число: 1111 
-Введите второе число: 1111 
+Введите задуманное число: 1111
+Введите второе число: 1111
 Быков: 4, коров: 0
 
 Рекомендации по выполнению
@@ -41,37 +41,25 @@
 
 int main() {
 
-	std::string inputNumber;
-	std::cout << "Enter a real number, not in exponential form: ";
-	std::cin >> inputNumber;
+	std::string secretNumber;
+	std::cout << "Enter the intended number: ";
+	std::cin >> secretNumber;
 
-	bool correctNumber = true;
-	bool presenceDigit = false;
-	int numberPoints = 0;
+	std::string answerNumber;
+	std::cout << "Enter the second number: ";
+	std::cin >> answerNumber;
 
-	if (inputNumber[0] >= '0' && inputNumber[0] <= '9') {
-		presenceDigit = true;
-	}
-	else if (inputNumber[0] == '.') {
-		numberPoints++;
-	}
-	else if (inputNumber[0] != '-') {
-		correctNumber = false;
-	}
+	int bulls = 0, cow = 0;
 
-	for (int i = 1; correctNumber && i < inputNumber.length(); i++) {
-		if (inputNumber[i] >= '0' && inputNumber[i] <= '9') {
-			presenceDigit = true;
-		}
-		else if (inputNumber[i] == '.') {
-			numberPoints++;
-		}
-		else {
-			correctNumber = false;
-		}
-		if (numberPoints > 1) {
-			correctNumber = false;
-		}
-	}
 
-	std::cout << ((presenceDigit && correctNumber) ? "Yes" : "No");
+	for (int i = 0; i < answerNumber.length(); i++) {
+		if (answerNumber[i] = secretNumber[i]) {
+			bulls++;
+		}
+		else for (int j = 0; j < answerNumber.length(); j++) {
+			if (answerNumber[i] = secretNumber[j]) {
+				cow++;
+			}
+		}
+
+	std::cout << "Bulls: " << bulls << ", cow: " << cow;
