@@ -61,5 +61,9 @@ int main() {
 				cow++;
 			}
 		}
+		if (numberPoints > 1) {
+			correctNumber = false;
+		}
+	}
 
-	std::cout << "Bulls: " << bulls << ", cow: " << cow;
+	std::cout << ((presenceDigit && correctNumber) ? "Yes" : "No");
