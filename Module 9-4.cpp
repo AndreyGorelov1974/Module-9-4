@@ -60,10 +60,8 @@ int main() {
 			if (answerNumber[i] = secretNumber[j]) {
 				cow++;
 			}
-		}
-		if (numberPoints > 1) {
-			correctNumber = false;
+
 		}
 	}
-
-	std::cout << ((presenceDigit && correctNumber) ? "Yes" : "No");
+	std::cout << "Bulls: " "Yes" : "No");
+}
