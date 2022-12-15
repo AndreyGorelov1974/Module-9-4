@@ -63,5 +63,5 @@ int main() {
 
 		}
 	}
-	std::cout << "Bulls: " "Yes" : "No");
+	std::cout << "Bulls: " << bulls << ", cow: " << cow << std::endl;
 }
